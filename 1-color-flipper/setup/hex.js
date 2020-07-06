@@ -7,11 +7,11 @@ const span = document.querySelector(".color");
 const btn = document.querySelector("#btn");
 // randomly select the 6 hex values
 const randHex = () => {
-  const newHexArr = ["#"];
+  let newHex = "#";
   for (let i = 0; i < 6; i++) {
-    newHexArr.push(hex[Math.floor(Math.random() * hex.length)]);
+    newHex += hex[Math.floor(Math.random() * hex.length)];
   }
-  return newHexArr.join("");
+  return newHex;
 };
 // execute fn on clicking the btn
 btn.addEventListener("click", () => {
